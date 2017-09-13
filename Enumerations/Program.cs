@@ -8,23 +8,23 @@ namespace Enumerations
 {
     class Program
     {
-        public enum Animals
+        public enum MonthsOfTheYear
         {
-            Dog, FurryDog, SmallDog, LongDog, BadDog, FunnyDog, AtomicDog, OldDog
+            Jan = 1, Feb = 2, Mar = 3, Apr = 4, May = 5, Jun = 6, Jul = 7, Aug = 8, Sept = 9, Oct = 10, Nov = 11, Dec = 12
         }
-        public enum Places
-        {
-            Chicago, Seattle, Dallas, Providence, Athens, Olen, Warrensberg, Jackson
-        }
-
         static void Main(string[] args)
         {
-            Console.Write(" Greetings user, please pick a whole number between 0 and 7: ");
-            var userInput = Console.ReadLine();
-            int input;
-            int.TryParse(userInput, out input);
-            //var result = (Places)input;
-            Console.WriteLine($" Your number corresponds with my {(Animals)input} I had while I was living in {(Places)input}.");
+            Console.Write(" Greeting user, please enter a number between 1 and 12: ");
+            var userInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            if (userInput < 1 || userInput > 12)
+            {
+                Console.Write("Please enter a valid numeric entry between 1 and 12: ");
+                userInput = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine();
+            var num = (MonthsOfTheYear)userInput;
+            Console.WriteLine($" {num} is the month that correspondes to the number you selected.\n");
         }
     }
 }
