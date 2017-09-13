@@ -17,6 +17,12 @@ namespace Enumerations
             Console.Write(" Greeting user, please enter a number between 1 and 12: ");
             var userInput = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
+            if (userInput < 1 || userInput > 12)
+            {
+                Console.Write("Please enter a valid numeric entry between 1 and 12: ");
+                userInput = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine();
             var num = (MonthsOfTheYear)userInput;
             Console.WriteLine($" {num} is the month that correspondes to the number you selected.\n");
         }
