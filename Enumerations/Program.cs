@@ -10,6 +10,7 @@ namespace Enumerations
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
