@@ -19,11 +19,14 @@ namespace Enumerations
 
         static void Main(string[] args)
         {
-            Console.Write("Greetings user, please pick a whole number between 0 and 7: ");
+            Console.Write(" Greetings user, please pick a whole number between 0 and 7: ");
             var userInput = Console.ReadLine();
+            Console.WriteLine();
             int input;
             int.TryParse(userInput, out input);
-            Console.WriteLine(input);
+            //var result = (Places)input;
+            Console.WriteLine($" Your number corresponds to my {(Animals)input} I had while I was living in {(Places)input}.\n");
         }
     }
 }
+
