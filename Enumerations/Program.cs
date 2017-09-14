@@ -8,7 +8,7 @@ namespace Enumerations
 {
     public enum Animals
     {
-        Dog, FurryDog, SmallDog, LongDog, BadDog, FunnyDog, AtomicDog, OldDog
+        BigDog, FurryDog, SmallDog, LongDog, BadDog, FunnyDog, AtomicDog, OldDog
     }
 
     public enum Places
@@ -20,13 +20,12 @@ namespace Enumerations
     {
         static void Main(string[] args)
         {
-            Console.Write(" Greetings user, please pick a whole number between 0 and 7: ");
-            var userInput = Console.ReadLine();
-            Console.WriteLine();
-            int input;
-            int.TryParse(userInput, out input);
+            Console.Write("\n Greetings user, please pick a whole number between 0 and 7: ");
+            var userInput = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Please pick a second whole number between 0 and 7: ");
+            var userSecondInput = Convert.ToInt32(Console.ReadLine());
             //var result = (Places)input;
-            Console.WriteLine($" Your number corresponds to my {(Animals)input} I had while I was living in {(Places)input}.\n");
+            Console.WriteLine($"\n Your numbers corresponds to my {(Animals)userInput} that I had while I was living in {(Places)userSecondInput}.\n");
         }
     }
 }
